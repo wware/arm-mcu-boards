@@ -35,6 +35,48 @@ There is an interesting-looking open-source RTOS called `ChibiOS/RT`_.
 It provides preemptive multithreading, 128 priority levels, a scheduler,
 timers, semaphores, mutexes, queues, etc.
 
+What boards will I play with?
+=============================
+
+In past years, I played with the Olimex P256, H256, and H64 boards for the
+AT91SAM7 processor. I am finding that as the SAM7 architecture has been
+increasingly replaced by others, the online resources for those boards have
+ceased to exist, so I won't be using those.
+
+Here is a very nice discussion of Cortex M3 basics.
+* http://sigalrm.blogspot.com/2010/09/introduction-to-arm-cortex-m3-part-1.html
+* http://sigalrm.blogspot.com/2010/09/introduction-to-arm-cortex-m3-part-2.html
+
+Poking around the house, I find several more modern boards.
+* some Raspberry Pi boards
+* a BeagleBone Black
+* a LPC1769 LPCXpresso board from Digikey
+* a Leaflabs Maple board
+* a DM368 Leopardboard
+I think the easiest to hack will be the LPCXpresso and the Maple board. Or it
+might make sense to pick up an mbed board since those ought to be pretty easy
+to work with. While looking for "Getting Started" info for either the
+LPCXpresso, the best thing I found was this:
+* http://pygmy.utoh.org/riscy/cortex/led-lpc17xx.html
+This is a command-line guy like myself who isn't crazy about the Code Red
+Eclipse setup for the LPCXpresso. Actually he advises against the LPCXpresso in
+general.
+
+The Maple board offers both an Arduino-style IDE and command-line build tools.
+* http://leaflabs.com/docs/maple-quickstart.html
+* http://leaflabs.com/docs/unix-toolchain.html
+* http://leaflabs.com/docs/language.html
+Here is some independent hacking by some guy who appears to know what he's
+doing:
+* http://stm32stuff.blogspot.com/2011/02/leaflabs-maple.html
+
+So I'm trying to install the Maple IDE on my Ubuntu 12.04 instance, and I need
+to do this first::
+
+ sudo apt-get install default-jdk ia32-libs
+
+
+
 Specific ideas to tinker with
 =============================
 
