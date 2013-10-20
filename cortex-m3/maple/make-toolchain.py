@@ -152,10 +152,7 @@ class Architecture:
             .replace('PREFIX', self.prefix)
 
 
-if 'm68k' in sys.argv[1:]:
-    arch = Architecture('m68k')
-else:
-    arch = Architecture('arm')
+arch = Architecture('arm-none-eabi')
 
 if 'clean' in sys.argv[1:]:
     map(lambda pkg: pkg.clean(),
