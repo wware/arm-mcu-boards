@@ -12,7 +12,7 @@ root = os.popen('pwd').read().strip()
 tarballdir = os.path.join(root, 'tarballs')
 srcdir = os.path.join(root, 'src')
 builddir = os.path.join(root, 'build')
-objtype = 'elf'
+objtype = 'eabi'
 
 def do_cmd(x):
     print x
@@ -152,7 +152,7 @@ class Architecture:
             .replace('PREFIX', self.prefix)
 
 
-arch = Architecture('arm-none-eabi')
+arch = Architecture('arm-none')
 
 if 'clean' in sys.argv[1:]:
     map(lambda pkg: pkg.clean(),
