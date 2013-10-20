@@ -48,7 +48,7 @@ class Package:
     def procure_source_tarball(self):
         path = os.path.join(tarballdir, self.filename)
         if not os.path.isfile(path):
-            do_cmd('curl -L -o %s %s' % (path, self.url))
+            do_cmd('wget -o %s %s' % (path, self.url))
             assert os.path.isfile(path)
 
     def unpack_source(self):
